@@ -530,7 +530,12 @@ class ButtonOption(BaseOption):
         return self
 
     def reset(self) -> None:
-        """Nothing to reset."""
+        """
+        Does nothing as button options do not contain anything.
+
+        Exists to allow GroupedOption and NestedOption to call reset on all their children without
+        an error being thrown.
+        """
 
 
 @dataclass
